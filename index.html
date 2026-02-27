@@ -52,6 +52,7 @@
         font-family: "DM Serif Display", serif;
         font-size: 55px;
         line-height: 1.1;
+        font-weight: 800;
       }
 
       .badge-custom {
@@ -99,7 +100,7 @@
         height: 100%;
         background-color: #d7e6dd;
       }
-      /* 
+      /*
       .project-card:hover {
         transform: translateY(-5px);
       } */
@@ -125,6 +126,7 @@
       /* Om mig */
       .h2 {
         font-family: "DM Serif Display", serif;
+        font-size: 50px;
       }
 
       html,
@@ -146,12 +148,20 @@
         scroll-snap-stop: always;
         display: flex;
         align-items: center;
-        padding-top: 80px; /* pga fixed navbar */
+        padding-top: 80px;
+      }
+      .p-text {
+        font-size: 12px;
+        padding-left: 20px;
+      }
+
+      .serif {
+        font-family: "DM Serif Display", serif;
       }
     </style>
   </head>
   <body>
-    <!-- ================= NAVBAR ================= -->
+    <!--  Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
         <a class="navbar-brand fw-bold" href="#side1">
@@ -185,7 +195,7 @@
       </div>
     </nav>
 
-    <!-- ================= HERO ================= -->
+    <!-- Hero -->
     <div class="snap-container">
       <section id="side1" class="hero-section snap-container">
         <div class="container">
@@ -213,7 +223,7 @@
               <div class="position-relative" style="height: 500px">
                 <img
                   src="img/billede3.png"
-                  class="position-absolute rounded-4 border shadow"
+                  class="position-absolute rounded-4 border shadow border border-5 border-white"
                   style="
                     width: 220px;
                     top: 0;
@@ -224,7 +234,7 @@
 
                 <img
                   src="img/billede2.png"
-                  class="position-absolute rounded-4 border shadow"
+                  class="position-absolute rounded-4 border shadow border border-5 border-white"
                   style="
                     width: 300px;
                     top: 100px;
@@ -235,7 +245,7 @@
 
                 <img
                   src="img/billede1.png"
-                  class="position-absolute rounded-4 border shadow"
+                  class="position-absolute rounded-4 border shadow border border-5 border-white"
                   style="
                     width: 260px;
                     bottom: 0;
@@ -249,7 +259,7 @@
         </div>
       </section>
 
-      <!-- ================= OM MIG ================= -->
+      <!--   Om mig -->
       <section id="om-mig" class="section-green py-10 snap-container">
         <div class="container">
           <div class="row">
@@ -321,7 +331,7 @@
         </div>
       </section>
 
-      <!-- ================= PROJEKTER ================= -->
+      <!-- Projekter -->
       <section id="projekter" class="py-5 snap-container">
         <div class="container">
           <!-- Header -->
@@ -352,7 +362,7 @@
                     <span class="project-year">2025</span>
                   </div>
 
-                  <h3 class="fw-bold mt-2 fancy text-green">
+                  <h3 class="fw-bold mt-2 serif fancy text-green">
                     Ankjær Enterprise
                   </h3>
 
@@ -380,7 +390,7 @@
                     <span class="project-year">2025</span>
                   </div>
 
-                  <h3 class="fw-bold mt-2 fancy text-green">
+                  <h3 class="fw-bold mt-2 serif fancy text-green">
                     App til genbrug af byggematerialer
                   </h3>
 
@@ -410,7 +420,7 @@
                     <span class="project-year">2024</span>
                   </div>
 
-                  <h3 class="fw-bold mt-2 fancy text-green">
+                  <h3 class="fw-bold mt-2 serif fancy text-green">
                     Portfolio Website 2024
                   </h3>
 
@@ -427,13 +437,13 @@
         </div>
       </section>
 
-      <!-- ================= KONTAKT ================= -->
+      <!-- Kontakt -->
       <section id="kontakt" class="py-5 section-green">
         <div class="container d-flex justify-content-center">
           <div class="contact-box w-100" style="max-width: 800px">
             <div class="row align-items-center">
               <div class="col-md-6">
-                <h2 class="h2">Kontakt mig</h2>
+                <h2 class="h2 serif">Kontakt mig</h2>
                 <p>Lad os skabe noget sammen.</p>
               </div>
 
@@ -441,7 +451,13 @@
                 <ul class="list-unstyled">
                   <li>Email: aviendahl@hotmail.com</li>
                   <li>Tlf: 40112020</li>
-                  <li>LinkedIn</li>
+                  <a
+                    class="text-white text-decoration-none"
+                    href="https://www.linkedin.com/in/..."
+                    target="_blank"
+                  >
+                    LinkedIn
+                  </a>
                 </ul>
               </div>
             </div>
