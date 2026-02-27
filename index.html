@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+
+    <style>
+      body {
+        background: #edf3f0;
+        font-family: "DM Sans", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      /* Colors */
+      .text-green {
+        color: #28885f;
+      }
+      .bg-green {
+        background: #28885f;
+      }
+
+      /* Navbar */
+      .navbar {
+        background: #edf3f0;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .nav-link:hover {
+        color: #28885f !important;
+      }
+
+      /* Hero */
+      .hero-section {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+      }
+
+      .hero-title {
+        font-family: "DM Serif Display", serif;
+        font-size: 55px;
+        line-height: 1.1;
+      }
+
+      .badge-custom {
+        background: #d7e6dd;
+        color: #28885f;
+        padding: 12px 16px;
+        border-radius: 12px;
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 2px;
+        display: inline-block;
+      }
+
+      .fancy-btn {
+        background: #28885f;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        padding: 14px 26px;
+      }
+
+      .fancy-btn:hover {
+        background: #1f6e4d;
+      }
+
+      /* Sections */
+      .section-green {
+        background: #d7e6dd;
+      }
+
+      .skills {
+        background: #edf3f0;
+        padding: 8px 14px;
+        border-radius: 10px;
+        font-size: 14px;
+        display: inline-block;
+        margin: 5px;
+      }
+
+      /* Projects */
+      .project-card {
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        transition: 0.3s;
+        height: 100%;
+        background-color: #d7e6dd;
+      }
+      /* 
+      .project-card:hover {
+        transform: translateY(-5px);
+      } */
+
+      .project-header {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .project-year {
+        font-size: 12px;
+        color: gray;
+      }
+
+      /* Kontakt */
+      .contact-box {
+        background: #28885f;
+        color: white;
+        border-radius: 12px;
+        padding: 40px;
+      }
+
+      /* Om mig */
+      .h2 {
+        font-family: "DM Serif Display", serif;
+      }
+
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+      }
+
+      .snap-container {
+        height: 100vh;
+        overflow-y: auto;
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
+      }
+
+      .snap-container section {
+        height: 100vh;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        display: flex;
+        align-items: center;
+        padding-top: 80px; /* pga fixed navbar */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#side1">
+          Portfolio<span class="text-green">.</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="nav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#om-mig">Om</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#projekter">Projekter</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#kontakt">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <div class="snap-container">
+      <section id="side1" class="hero-section snap-container">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <div class="badge-custom">MMD & Webudvikler</div>
+
+              <h1 class="hero-title mt-3">
+                Jeg skaber <br />
+                <span class="text-green">digitale</span> oplevelser
+              </h1>
+
+              <p class="mt-3">Her kan du se mine projekter og erfaringer.</p>
+
+              <a
+                href="#projekter"
+                class="fancy-btn mt-3 d-inline-block text-decoration-none"
+              >
+                Se projekter
+              </a>
+            </div>
+
+            <div class="col-md-6">
+              <!-- Billeder -->
+              <div class="position-relative" style="height: 500px">
+                <img
+                  src="img/billede3.png"
+                  class="position-absolute rounded-4 border shadow"
+                  style="
+                    width: 220px;
+                    top: 0;
+                    left: 0;
+                    transform: rotate(-6deg);
+                  "
+                />
+
+                <img
+                  src="img/billede2.png"
+                  class="position-absolute rounded-4 border shadow"
+                  style="
+                    width: 300px;
+                    top: 100px;
+                    right: 0;
+                    transform: rotate(4deg);
+                  "
+                />
+
+                <img
+                  src="img/billede1.png"
+                  class="position-absolute rounded-4 border shadow"
+                  style="
+                    width: 260px;
+                    bottom: 0;
+                    left: 100px;
+                    transform: rotate(-3deg);
+                  "
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= OM MIG ================= -->
+      <section id="om-mig" class="section-green py-10 snap-container">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h2 class="fw-bold h2">
+                Alberte <span class="text-green">Viendahl</span>
+              </h2>
+
+              <img
+                src="img/mig.png"
+                class="rounded-4 shadow mt-3 border border-5 border-white"
+                style="max-width: 250px"
+              />
+
+              <p class="mt-4">
+                Jeg blev uddannet multimediedesigner i 2025 og er på nuværende
+                tidspunkt i gang med en top-op i webudvikling. Jeg elsker at
+                kombinere kreativt design med teknisk udvikling for at skabe
+                unikke digitale oplevelser. Min passion ligger i at bygge
+                smukke, brugervenlige hjemmesider og applikationer, der gør en
+                forskel for både brugere og virksomheder.
+              </p>
+            </div>
+
+            <div class="col-md-6">
+              <h3 class="text-green text-uppercase small">Kompetencer</h3>
+
+              <div class="mb-4">
+                <span class="skills">JavaScript</span>
+                <span class="skills">React</span>
+                <span class="skills">Astro</span>
+                <span class="skills">Vue.js</span>
+                <span class="skills">MySQL</span>
+                <span class="skills">Tailwind</span>
+                <span class="skills">Figma</span>
+                <span class="skills">Blender</span>
+                <span class="skills">Github</span>
+                <span class="skills">Superbase</span>
+                <span class="skills">Netlify</span>
+                <span class="skills">Vercel</span>
+              </div>
+
+              <h3 class="text-green text-uppercase small">Info</h3>
+
+              <div class="row g-3">
+                <div class="col-6">
+                  <div class="bg-white p-3 rounded-3 shadow-sm small">
+                    <strong>Lokation</strong><br />
+                    København, Danmark
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <div class="bg-white p-3 rounded-3 shadow-sm small">
+                    <strong>Uddannelse</strong><br />
+                    Multimedesign + Webudvikler
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <div class="bg-white p-3 rounded-3 shadow-sm small">
+                    <strong>Arbejde</strong><br />
+                    Organic Growth
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PROJEKTER ================= -->
+      <section id="projekter" class="py-5 snap-container">
+        <div class="container">
+          <!-- Header -->
+          <div class="mb-5">
+            <p class="text-green text-uppercase small mb-2">
+              Udvalgte projekter
+            </p>
+
+            <h2 class="fw-bold h2 mb-2">Mine projekter</h2>
+
+            <p class="text-muted">
+              Et udvalg af projekter jeg har arbejdet på de seneste år.
+            </p>
+          </div>
+
+          <!-- Grid -->
+          <div class="row g-4">
+            <!-- PROJECT 1 -->
+            <div class="col-md-4">
+              <a
+                href="https://forket-ate.vercel.app"
+                target="_blank"
+                class="text-decoration-none text-dark h-100 d-block"
+              >
+                <div class="card project-card h-100 d-flex flex-column p-4">
+                  <div class="project-header mb-2">
+                    <span>Hjemmeside til enterprise firma</span>
+                    <span class="project-year">2025</span>
+                  </div>
+
+                  <h3 class="fw-bold mt-2 fancy text-green">
+                    Ankjær Enterprise
+                  </h3>
+
+                  <p class="mb-4">Mit afsluttende eksamensprojekt MMD 2025</p>
+
+                  <div class="mt-auto">
+                    <span class="p-text">React</span>
+                    <span class="p-text">Tailwind</span>
+                    <span class="p-text">Double Diamond</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- PROJECT 2 -->
+            <div class="col-md-4">
+              <a
+                href="https://rebuildit.netlify.app"
+                target="_blank"
+                class="text-decoration-none text-dark h-100 d-block"
+              >
+                <div class="card project-card h-100 d-flex flex-column p-4">
+                  <div class="project-header mb-2">
+                    <span>Bæredygtighedsprojekt</span>
+                    <span class="project-year">2025</span>
+                  </div>
+
+                  <h3 class="fw-bold mt-2 fancy text-green">
+                    App til genbrug af byggematerialer
+                  </h3>
+
+                  <p class="mb-4">
+                    Webshop med søgefunktion og kategorisering.
+                  </p>
+
+                  <div class="mt-auto">
+                    <span class="p-text">Vue</span>
+                    <span class="p-text">MySQL</span>
+                    <span class="p-text">GitHub</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- PROJECT 3 -->
+            <div class="col-md-4">
+              <a
+                href="https://praktik2025.netlify.app/#section1"
+                target="_blank"
+                class="text-decoration-none text-dark h-100 d-block"
+              >
+                <div class="card project-card h-100 d-flex flex-column p-4">
+                  <div class="project-header mb-2">
+                    <span>Design & kreativtetsprojekt</span>
+                    <span class="project-year">2024</span>
+                  </div>
+
+                  <h3 class="fw-bold mt-2 fancy text-green">
+                    Portfolio Website 2024
+                  </h3>
+
+                  <p class="mb-4">En af mine tidligere portfolio-løsninger.</p>
+
+                  <div class="mt-auto">
+                    <span class="p-text">UI/UX</span>
+                    <span class="p-text">HTML & CSS</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= KONTAKT ================= -->
+      <section id="kontakt" class="py-5 section-green">
+        <div class="container d-flex justify-content-center">
+          <div class="contact-box w-100" style="max-width: 800px">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <h2 class="h2">Kontakt mig</h2>
+                <p>Lad os skabe noget sammen.</p>
+              </div>
+
+              <div class="col-md-6">
+                <ul class="list-unstyled">
+                  <li>Email: aviendahl@hotmail.com</li>
+                  <li>Tlf: 40112020</li>
+                  <li>LinkedIn</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
